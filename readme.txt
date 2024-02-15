@@ -1,8 +1,3 @@
-# [Advanced WordPress Theme Development 🎨](https://github.com/pradipchaudhary/advanced-wordpress-theme-development)
-
-[![Project Status: Active.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-Welcome to our comprehensive Advanced WordPress Theme Development course! This repository contains all the resources, code samples, and exercises you need to master the intricacies of building powerful and customizable WordPress themes. Whether you're a seasoned developer looking to enhance your skills or a beginner eager to dive into advanced theme development, this course covers key topics such as custom post types, advanced template hierarchies, theme optimization, and integration with popular plugins.
 Certainly! Below is a sample outline for an advanced WordPress theme development blog. Feel free to expand on each section based on your specific needs and audience.
 
 ---
@@ -17,9 +12,9 @@ WordPress, the most popular Content Management System (CMS), powers over 40% of 
 
 Before delving into advanced theme development, ensure you have a solid understanding of the following:
 
--   Basic HTML, CSS, and PHP.
--   WordPress fundamentals, including themes, templates, and the loop.
--   Familiarity with the WordPress Customizer and Theme Customization API.
+- Basic HTML, CSS, and PHP.
+- WordPress fundamentals, including themes, templates, and the loop.
+- Familiarity with the WordPress Customizer and Theme Customization API.
 
 ## 1. Mastering Custom Post Types and Taxonomies
 
@@ -60,15 +55,3 @@ Optimize your theme for speed and performance. This involves leveraging techniqu
 Advanced WordPress theme development opens up a world of possibilities for creating unique, feature-rich websites. Whether you're building a theme for personal use or planning to release it to the public, mastering these advanced techniques will set your WordPress themes apart.
 
 Remember, the key to successful theme development lies in a blend of creativity, functionality, and adherence to best practices. Keep exploring and pushing the boundaries of what WordPress themes can achieve, and your creations will undoubtedly stand out in the vast landscape of the web. Happy coding!
-
-## Maintainer
-
-| Name                                                   | Github Username  |
-| ------------------------------------------------------ | ---------------- |
-| [Pradip Chaudhary](mailto:chudharypradip678@gmail.com) | @pradipchaudhary |
-
-## 👩‍🏫 Contributing:
-
-We welcome contributions and feedback! If you find issues, have suggestions, or want to enhance the course content, feel free to create a pull request or open an issue.
-
-Happy coding, and let's elevate your WordPress theme development skills together! 🌟"
