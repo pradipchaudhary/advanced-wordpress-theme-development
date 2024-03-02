@@ -12,13 +12,24 @@ Whether you're a seasoned developer looking to enhance your skills or a beginner
 
 WordPress, the most popular Content Management System (CMS), powers over 40% of the web. While there are countless themes available, creating a custom theme can offer unparalleled flexibility and control. In this blog, we'll dive into the world of advanced WordPress theme development, exploring key concepts and techniques to take your theme-building skills to the next level.
 
+## Overview
+
+The "Advanced WordPress Theme Development" eBook focuses on empowering developers with the skills needed to take their WordPress theme development to the next level. It covers advanced techniques, code samples, and best practices to create high-quality and scalable themes.
+
+## Features
+
+-  In-depth tutorials on advanced WordPress theming concepts.
+-  Code samples illustrating key development techniques.
+-  Best practices for creating maintainable and scalable themes.
+-  [Link to Live Demo]()
+
 ## Prerequisites
 
 Before delving into advanced theme development, ensure you have a solid understanding of the following:
 
-> -  Basic HTML, CSS, and PHP.
-> -  WordPress fundamentals, including themes, templates, and the loop.
-> -  Familiarity with the WordPress Customizer and Theme Customization API.
+-  Basic HTML, CSS, and PHP.
+-  WordPress fundamentals, including themes, templates, and the loop.
+-  Familiarity with the WordPress Customizer and Theme Customization API.
 
 <br>
 
@@ -54,50 +65,22 @@ Creating a WordPress theme involves creating a set of files and organizing them 
    -  Add the basic structure of an HTML document and include the WordPress functions to display content:
 
    ```php
-   <?php get_header(); ?>
-
-   <div id="content">
-       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-           <article <?php post_class(); ?>>
-               <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-               <?php the_content(); ?>
-           </article>
-       <?php endwhile; endif; ?>
-   </div>
-
-   <?php get_sidebar(); ?>
-
-   <?php get_footer(); ?>
-   ```
-
-4. **Create header and footer files:**
-
-   -  Create a file named `header.php` and a file named `footer.php`.
-   -  Add the basic structure for header and footer:
-
-   ```php
-   <!-- header.php -->
    <!DOCTYPE html>
-   <html <?php language_attributes(); ?>>
-   <head>
-       <meta charset="<?php bloginfo('charset'); ?>">
-       <title><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title>
-       <?php wp_head(); ?>
-   </head>
-   <body <?php body_class(); ?>>
-
-   <!-- footer.php -->
-   <?php wp_footer(); ?>
-   </body>
-   </html>
+   <html lang="en">
    ```
 
-5. **Activate your theme:**
-   -  Log in to your WordPress admin dashboard.
-   -  Go to "Appearance" -> "Themes."
-   -  You should see your theme listed; click "Activate."
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title </title>
+</head>
 
-Your basic WordPress theme is now set up. Customize the `index.php`, `header.php`, and `footer.php` files according to your design and add more template files as needed. You can also add CSS and JavaScript files to enhance the styling and functionality of your theme. Refer to the WordPress Theme Developer Handbook for more advanced features and best practices: https://developer.wordpress.org/themes/
+<body>
+
+</body>
+
+</html>
+   ```
 
 ## 👩‍🏫 Contributing:
 
