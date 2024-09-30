@@ -26,13 +26,21 @@ export const getAllProject = async (req, res) => {
 
 export const getSpecificProject = async (req, res) => {
     try {
-        const project = await Project.findById(req.params.id);
+        // Extract project ID from request parameters
+        const projectId = req.params.id;
+
+        // Find project by ID in MongoDB
+        const project = await Project.findById(projectId);
+
+        // If project not found, return 404
         if (!project) {
-            return res.status(404).send("Project not found");
+            return res.status(404).json({ message: "Project not found" });
         }
+
+        // Send the project data as the response
         res.json(project);
     } catch (error) {
         console.error(error);
-        res.status(500).send("Server error");
+        res.status(500).json({ message: "Server error" });
     }
 };
