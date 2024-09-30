@@ -1,0 +1,53 @@
+# Node modules directory
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directory for local environment configuration
+.env
+
+# Temporary files
+*.tmp
+*.temp
+
+# Debugger output
+.vscode/
+*.log
+
+# Build files
+dist/
+build/
+coverage/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# npm packages
+package-lock.json
+yarn.lock
+
+# IDE files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
+
+# Coverage directory for test coverage reports
+coverage/
+
+# Miscellaneous
+*.swp
