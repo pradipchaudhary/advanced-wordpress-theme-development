@@ -21,3 +21,18 @@ export const getAllProject = async (req, res) => {
         res.status(400).json({ "Error: ": error.message });
     }
 };
+
+// get specific project
+
+export const getSpecificProject = async (req, res) => {
+    try {
+        const project = await Project.findById(req.params.id, req.body, {
+            new: true,
+        });
+        res.json({
+            data: project,
+        });
+    } catch (error) {
+        res.status(400).json({ "Error: ": error.message });
+    }
+};
