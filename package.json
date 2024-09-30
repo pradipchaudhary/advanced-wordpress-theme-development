@@ -1,0 +1,20 @@
+{
+    "name": "100-js-projects-api",
+    "version": "1.0.0",
+    "description": "AccessEase is a web accessibility overlay tool that allows users to customize their browsing experience based on their specific needs. The project offers features such as high-contrast mode, adjustable text sizes, text-to-speech, and simplified content, making the web more accessible to users with visual, cognitive, auditory, and motor impairments.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "Pradip Chaudhary",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.21.0",
+        "mongoose": "^8.7.0"
+    }
+}
