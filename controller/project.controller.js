@@ -26,9 +26,7 @@ export const getAllProject = async (req, res) => {
 
 export const getSpecificProject = async (req, res) => {
     try {
-        const project = await Project.findById(req.params.id, req.body, {
-            new: true,
-        });
+        const project = await Project.findById(req.params.id);
         res.json({
             data: project,
         });
