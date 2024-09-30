@@ -27,10 +27,12 @@ export const getAllProject = async (req, res) => {
 export const getSpecificProject = async (req, res) => {
     try {
         const project = await Project.findById(req.params.id);
-        res.json({
-            data: project,
-        });
+        if (!project) {
+            return res.status(404).send("Project not found");
+        }
+        res.json(project);
     } catch (error) {
-        res.status(400).json({ "Error: ": error.message });
+        console.error(error);
+        res.status(500).send("Server error");
     }
 };
