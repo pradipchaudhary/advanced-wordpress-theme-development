@@ -83,5 +83,4 @@ Contributions are welcome! If you would like to improve or add new projects to t
 ## License
 
 This repository is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
-```
 
