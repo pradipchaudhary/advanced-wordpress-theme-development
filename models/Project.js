@@ -95,6 +95,11 @@ const projectSchema = mongoose.Schema(
                 message: "There must be at least one tag for the project",
             },
         },
+        createdBy: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+            required: true,
+        },
     },
     { timestamps: true }
 );
