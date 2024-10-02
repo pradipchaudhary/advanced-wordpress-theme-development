@@ -1,7 +1,7 @@
 import mongoose, { Schema, model } from "mongoose";
 
 // Schema definition
-const projectSchema = mongoose.Schema(
+const projectSchema = new Schema(
     {
         name: {
             type: String,
@@ -61,7 +61,7 @@ const projectSchema = mongoose.Schema(
             type: String,
             required: [true, "Thumbnail URL is required"],
             match: [
-                /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif)$/,
+                /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif)$/i,
                 "Thumbnail must be a valid image URL",
             ],
         },
@@ -69,14 +69,14 @@ const projectSchema = mongoose.Schema(
             type: String,
             required: [true, "Code repository link is required"],
             match: [
-                /^https?:\/\/(www\.)?github\.com\/.+/,
+                /^https?:\/\/(www\.)?github\.com\/.+/i,
                 "Code link must be a valid GitHub URL",
             ],
         },
         liveDemoLink: {
             type: String,
             required: [true, "Live demo link is required"],
-            match: [/^https?:\/\/.+/, "Live demo link must be a valid URL"],
+            match: [/^https?:\/\/.+/i, "Live demo link must be a valid URL"],
         },
         contributors: {
             type: [String],
@@ -95,11 +95,17 @@ const projectSchema = mongoose.Schema(
                 message: "There must be at least one tag for the project",
             },
         },
+        createdBy: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+            required: true,
+        },
     },
+
     { timestamps: true }
 );
 
 // Model
-const Project = mongoose.model("Project", projectSchema);
+const Project = model("Project", projectSchema);
 
 export default Project;
