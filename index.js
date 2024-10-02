@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import projectRoute from "./routes/projectRoute.js";
-import Project from "./models/Project.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -19,6 +19,7 @@ connectDB();
 
 // Routes
 app.use("/api/project", projectRoute);
+app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
     res.send("Home ");
 });
