@@ -3,8 +3,6 @@ import Project from "../models/Project.js";
 // Create project
 
 export const createProject = async (req, res) => {
-    console.log(req.user); // Check if req.user is populated
-
     const {
         name,
         description,
@@ -23,7 +21,7 @@ export const createProject = async (req, res) => {
     } = req.body;
 
     try {
-        // Check if req.user exists and has an _id
+        // Check if req.user exists and has an id
         if (!req.user || !req.user.id) {
             return res
                 .status(401)
@@ -61,7 +59,7 @@ export const createProject = async (req, res) => {
             liveDemoLink,
             contributors,
             tags,
-            createdBy: req.user.id, // Make sure req.user._id exists
+            createdBy: req.user.id, // Make sure req.user.id exists
         });
 
         // Save the project to the database
